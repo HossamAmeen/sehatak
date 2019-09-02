@@ -1,0 +1,3 @@
+[02-Sep-2019 11:03:08 UTC] PHP Warning:  require(/home/t4xtfspii4qm/public_html/sehatakhospital.com/public/../vendor/autoload.php): failed to open stream: No such file or directory in /home/t4xtfspii4qm/public_html/sehatakhospital.com/public/index.php on line 24
+[02-Sep-2019 11:03:08 UTC] PHP Fatal error:  require(): Failed opening required '/home/t4xtfspii4qm/public_html/sehatakhospital.com/public/../vendor/autoload.php' (include_path='.:/opt/alt/php72/usr/share/pear') in /home/t4xtfspii4qm/public_html/sehatakhospital.com/public/index.php on line 24
+[02-Sep-2019 11:17:20 UTC] PHP Fatal error:  Class 'App\Http\Controllers\Backend\BackEndController' not found in /home/t4xtfspii4qm/public_html/sehatakhospital.com/app/Http/Controllers/BackEnd/BrefController.php on line 11

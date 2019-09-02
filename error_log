@@ -1,0 +1,10 @@
+[02-Sep-2019 11:03:49 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Foundation\Application' not found in /home/t4xtfspii4qm/public_html/sehatakhospital.com/bootstrap/app.php:14
+Stack trace:
+#0 /home/t4xtfspii4qm/public_html/sehatakhospital.com/artisan(20): require_once()
+#1 {main}
+  thrown in /home/t4xtfspii4qm/public_html/sehatakhospital.com/bootstrap/app.php on line 14
+[02-Sep-2019 11:04:11 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Foundation\Application' not found in /home/t4xtfspii4qm/public_html/sehatakhospital.com/bootstrap/app.php:14
+Stack trace:
+#0 /home/t4xtfspii4qm/public_html/sehatakhospital.com/artisan(20): require_once()
+#1 {main}
+  thrown in /home/t4xtfspii4qm/public_html/sehatakhospital.com/bootstrap/app.php on line 14

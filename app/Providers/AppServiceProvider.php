@@ -5,7 +5,7 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema; //NEW: Import Schema
 use Illuminate\Support\Facades\View;
-use App\MOdel\Bref;
+use App\Model\Bref;
 use DB;
 class AppServiceProvider extends ServiceProvider
 {
