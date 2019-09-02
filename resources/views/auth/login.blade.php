@@ -70,7 +70,7 @@
                             <i class="glyphicon glyphicon-user"></i>
 
                         </div>
-                        <h3>Identify Yourself</h3>
+                        <h3>login forum</h3>
                         <div class="social-btn-login">
                             <ul>
                                 {{-- <li><a href="javascript:void(0)"><i class="fa fa-facebook"></i></a></li>
@@ -148,7 +148,7 @@
                                     <i class="fa fa-rocket"></i> Send
                                 </button>
 
-                                <a class="login-view" href="javascript:void(0)">Login</a> & <a class="" href="registration.html">Registration</a>
+                                <a class="login-view" href="javascript:void(0)">Login</a> 
 
                             </div>
                         </form>
@@ -158,9 +158,7 @@
             </div>
         </div>
     </div>
-    <p class="copy-right big-screen hidden-xs hidden-sm">
-        <span>&#169;</span><span class="footer-year"></span>
-    </p>
+   
 </section>
 
 </body>
