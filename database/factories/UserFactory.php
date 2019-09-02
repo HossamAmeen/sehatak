@@ -58,7 +58,7 @@ $factory->define(App\Model\Bref::class, function (Faker $faker) {
         'phone' => $faker->e164PhoneNumber,
         'phone2' => $faker->e164PhoneNumber,
         'address' =>$faker->address ,
-        'video' => "https://www.youtube.com/watch?v=AZ1tfR2HxfY",
+        'video' => "https://www.youtube.com/embed/AZ1tfR2HxfY",
         'facebook' => "www.facebook.com",
         'twitter' => "https://twitter.com/",
         'instagram' => "https://www.instagram.com/",
