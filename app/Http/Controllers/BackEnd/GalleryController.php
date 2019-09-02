@@ -12,12 +12,16 @@ class GalleryController extends BackEndController
         parent::__construct($model);
     }
     public function store(Request $request){
-       
-            $fileName = $this->uploadImage($request , 1110 , 300 );
             $requestArray = $request->all();
-          
+            
+           
+            if($request->hasFile('image'))
+          {
+            $fileName = $this->uploadImage($request , 1110 , 300 );
             if(isset($requestArray['image']) )
             $requestArray['image'] =  $fileName;
+          }
+           
             $requestArray['user_id'] = Auth::user()->id;
             $this->model->create($requestArray);
             session()->flash('action', 'تم الاضافه بنجاح');
@@ -25,12 +29,18 @@ class GalleryController extends BackEndController
         }
     
         public function update($id , Request $request){
-            $fileName = $this->uploadImage($request );
-            $row = $this->model->FindOrFail($id);
             $requestArray = $request->all();
+            if($request->hasFile('image'))
+            {
+              $fileName = $this->uploadImage($request , 1110 , 300 );
+              if(isset($requestArray['image']) )
+              $requestArray['image'] =  $fileName;
+            }
+
            
-            if(isset($requestArray['image']) )
-            $requestArray['image'] =  $fileName;
+            $row = $this->model->FindOrFail($id);
+           
+           
             $requestArray['user_id'] = Auth::user()->id;
             $row->update($requestArray);
             session()->flash('action', 'تم التحديث بنجاح');

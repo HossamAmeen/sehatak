@@ -2,7 +2,7 @@
   <div class="container-fluid">
       <!--Logo text start-->
       <div class="header-logo">
-          <a href="#" title="">
+      <a href="{{route('index')}}" title="">
               <h1>صحتك</h1>
           </a>
       </div>

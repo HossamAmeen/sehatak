@@ -90,7 +90,7 @@ class BackEndController extends Controller
         ))->with($append);
     }
     protected function uploadImage($request , $height = 400 , $width = 400){
-       
+        
         $photo = $request->file('image');
         $fileName = time().str_random('10').'.'.$photo->getClientOriginalExtension();
         $destinationPath = public_path('uploads/'.$this->getClassNameFromModel().'/');
@@ -103,6 +103,7 @@ class BackEndController extends Controller
          }
         $image->save($destinationPath.$fileName,60);
         return $fileName;
+        
     }
     protected function filter($rows)
     {

@@ -75,7 +75,7 @@
             <a href="{{ isset($brefs->instagram) ? $brefs->instagram : '' }}" target="_blank"><i class="fa fa-instagram"></i></a>
           </li>
           <li>
-            <a href="{{ isset($brefs->phone2) ? $brefs->phone2 : '' }}" target="_blank"><i class="fa fa-phone"></i></a>
+            <a href="https://wa.me/{{ isset($brefs->phone2) ? $brefs->phone2 : '' }}" target="_blank"><i class="fa fa-phone"></i></a>
           </li>
         </ul>
         </div>

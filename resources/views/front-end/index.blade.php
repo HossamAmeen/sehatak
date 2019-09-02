@@ -34,7 +34,7 @@
               </p>
         </div>
         <div class="col-lg-6 col-xs-12 wow bounceInUp">
-          <iframe width="100%" height="315" src="https://www.youtube.com/embed/AZ1tfR2HxfY" frameborder="0"
+          <iframe width="100%" height="315" src=" {{ isset($brefs->video) ? $brefs->video : '' }}" frameborder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </div>
