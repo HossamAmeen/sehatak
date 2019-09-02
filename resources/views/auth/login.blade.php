@@ -100,8 +100,8 @@
                             </div>
                             @enderror
                             <div class="input-group ls-group-input">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror"
-                                 name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                <input id="email" type="text" class="form-control @error('email') is-invalid @enderror"
+                                 name="user_name" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
                                 <span class="input-group-addon"><i class="fa fa-user"></i></span>
                                 
