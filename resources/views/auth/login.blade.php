@@ -92,7 +92,7 @@
                     <div class="login-form">
                         <form id="form-login" action="{{ route('login') }}" class="form-horizontal ls_form" method="POST">
                                         @csrf
-                             @error('email')
+                             @error('login')
                             <div class="alert alert-danger">
                                 <button type="button" class="close" data-dismiss="alert"
                                                 aria-hidden="true">&times;</button>
@@ -100,8 +100,8 @@
                             </div>
                             @enderror
                             <div class="input-group ls-group-input">
-                                <input id="email" type="text" class="form-control @error('email') is-invalid @enderror"
-                                 name="user_name" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                <input id="text" type="text" class="form-control @error('login') is-invalid @enderror"
+                                 name="login" value="{{ old('login') }}" required autocomplete="login" autofocus>
 
                                 <span class="input-group-addon"><i class="fa fa-user"></i></span>
                                 

@@ -2,7 +2,7 @@
   <div class="container-fluid">
       <!--Logo text start-->
       <div class="header-logo">
-          <a href="index.html" title="">
+          <a href="#" title="">
               <h1>صحتك</h1>
           </a>
       </div>
@@ -35,11 +35,11 @@
           <!--Top Navigation Start-->
 
           <ul>
-              <li>
+              {{-- <li>
                   <a href="{{ url('admin/lock') }}">
                       <i class="fa fa-lock"></i>
                   </a>
-              </li>
+              </li> --}}
               <li>
                   
                   <a class="dropdown-item" href="{{ route('logout') }}"
