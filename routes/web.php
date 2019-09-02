@@ -20,7 +20,7 @@ Route::namespace('BackEnd')->prefix('admin')->group(function(){
 
 Route::namespace('FrontEnd')->group(function(){
     Route::get('/' , "HomeController@index")->name('index');
-    Route::get('/index' , "HomeController@index")->name('index');
+    Route::get('/index' , "HomeController@index")->name('');
     Route::get('news/{id?}' , "HomeController@news")->name('news');
     //Route::get('news/{id}' , "HomeController@show_news")->name('singleNews');
     Route::get('about' , "HomeController@about")->name('about');

@@ -99,7 +99,15 @@
                                             />
                                 </div>
                                 </div>
-                                
+                                  <div class="form-group">
+                                        <label class="col-lg-3 control-label">رابط الفديو</label>
+                                        <div class="col-lg-6">
+                                            <input type="text" class="form-control" name="video"
+                                             
+                                                 value="{{$row->video}}"
+                                                    />
+                                        </div>
+                                </div>
                                 <div class="form-group">
                                         <label class="col-lg-3 control-label">facebook account</label>
                                         <div class="col-lg-6">

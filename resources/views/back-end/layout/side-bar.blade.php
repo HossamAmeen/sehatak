@@ -40,7 +40,7 @@
         </li>
         <li class="{{is_active('galleries')}}">
             <a href="{{route('galleries.index')}}"  class="{{is_active('galleries')}}">
-                <i class="fa fa-group"></i><span>المعرض</span>
+                <i class="fa fa-group"></i><span>معرض الصور</span>
             </a>
         
         </li>
@@ -53,6 +53,16 @@
         <li class="{{is_active('questions')}}">
             <a href="{{route('questions.index')}}"  class="{{is_active('questions')}}">
                 <i class="fa fa-group"></i><span>الأسئله الشائعه</span>
+            </a>
+        
+        </li>
+        <li >
+            <a class="dropdown-item" href="{{ route('logout') }}"
+            onclick="event.preventDefault();
+                          document.getElementById('logout-form').submit();">
+             
+            
+             <i class="fa fa-power-off"></i><span>تسجيل الخروج</span>
             </a>
         
         </li>

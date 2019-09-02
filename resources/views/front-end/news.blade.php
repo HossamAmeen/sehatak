@@ -34,7 +34,7 @@
                             </div>
                             <div class="col-lg-6 col-xs-12 text-left">
                                 <h3>
-                                    <a href="{{route('singleNews' ,  $item->id ) }}">{{$item->title}}</a>
+                                    <a href="{{route('news' ,  $item->id ) }}">{{$item->title}}</a>
                                 </h3>
                                 <p>
                                         {{substr( $item->description , 0 , 800 )}}
