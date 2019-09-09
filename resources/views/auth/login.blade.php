@@ -137,12 +137,12 @@
                                     <span class="ladda-label"><i class="fa fa-key"></i></span>
                                 </button>
                                
-                             @if (Route::has('password.request'))
-                                {{-- <a  href="{{ route('password.request') }}">
+
+                                 <a  href="{{ route('password.request') }}">
                                     {{ __('Forgot Your Password?') }}
-                                </a> --}}
-                            @endif
-                                <a class="forgot-password" href="javascript:void(0)">Forgot password</a>
+                                </a>
+
+{{--                                <a class="forgot-password" href="javascript:void(0)">Forgot password</a>--}}
                             </div>
                         </form>
                     </div>
@@ -161,7 +161,7 @@
                                     <i class="fa fa-rocket"></i> Send
                                 </button>
 
-                                <a class="login-view" href="javascript:void(0)">Login</a> 
+                                <a class="login-view" href="javascript:void(0)">Login</a>
 
                             </div>
                         </form>

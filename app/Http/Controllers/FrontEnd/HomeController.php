@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Model\News;
 use App\Model\Gallery;
 use App\Model\Question;
+use Mail;
 class HomeController extends Controller
 {
     public function index()
@@ -24,7 +25,7 @@ class HomeController extends Controller
     public function news($id= null)
     {
         if($id == null )
-        $news = News::paginate(8);
+        $news = News::orderBy('id', 'DESC')->paginate(8);
         else
         $news = News::findorfail($id);
         $pageTitle = "خبر المشروع" ;
@@ -78,7 +79,7 @@ class HomeController extends Controller
     {
         $image = Gallery::all()->sortByDesc("id")->take(1)->first();
        
-        $images = Gallery::where('id' , '!=' , $image->id)->orderBy('id', 'DESC')->get();
+        $images = Gallery::where('id' , '!=' , $image->id)->orderBy('id', 'DESC')->paginate(8);
         
         $pageTitle = "معرض الصور" ;
         return view('front-end.gallery', compact(
@@ -90,7 +91,7 @@ class HomeController extends Controller
     }
     public function faq ()
     {
-        $faqs = Question::all()->sortByDesc("id");
+        $faqs = Question::orderBy('id', 'DESC')->paginate(8);
         $pageTitle = "الاسئله الشائعه" ;
         return view('front-end.faq', compact(
             'faqs',
@@ -106,5 +107,29 @@ class HomeController extends Controller
             'pageTitle'
          
         ));
+    }
+    public function contacts(Request $request)
+    {
+
+      
+
+        if ($request->isMethod('post')) {
+          
+           
+            $data=[
+                'email' =>  "test",
+               
+            ];
+            Mail::send('contact_mail',$data,function($message) use ($data){
+
+                $message->from( "info@tibaroyal.com" );
+                $message->to("hosamameen948@gmail.com");
+               
+            });
+           
+            return redirect()->back();
+        }
+
+        return view('contacts')->with(compact('title'));
     }
 }

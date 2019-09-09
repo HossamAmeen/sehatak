@@ -40,17 +40,17 @@
                             </div>
                         </div>
                         @endforeach
-                        {{ $news->links() }}
+                       
                         <!-- End News Items -->
                         <!-- Pagination -->
                         <div class="col-12 my-5 wow bounceIn">
                               
-                            <div class="pagination">
+                         
                                  
                                 <ul>
-                                       
+                                        {{ $news->links() }}
                                 </ul>
-                            </div>
+                          
                         </div>
                     </div>
                 </div>

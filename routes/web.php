@@ -13,7 +13,7 @@ Route::namespace('BackEnd')->prefix('admin')->group(function(){
         Route::resource('news', 'NewsController');
         Route::resource('questions', 'QuestionController');
         Route::resource('users', 'UserController')->middleware('checkAdmin');
-        Route::get('lock', 'PrefController@lock')->name('lock');
+
        
     });
 });
@@ -28,10 +28,13 @@ Route::namespace('FrontEnd')->group(function(){
     Route::get('gallery' , "HomeController@gallery")->name('gallery');
     Route::get('faq' , "HomeController@faq")->name('faq');
     Route::get('404' , "HomeController@not_found")->name('404');
+
+
+    Route::any('contacts' , "HomeController@contacts")->name('contacts');
     
 });
 Route::fallback(function () {
-    return "test";
+  
    return redirect()->route("404");
    return view('front-end.404');
 });

@@ -44,12 +44,10 @@
                     </div>
                     @endforeach
                     
-                    
-                    <!-- End FAQ Items -->
-                    <!-- More Button -->
-                    <div class="col-12 my-5 text-center wow bounceIn">
-                        <a href="javascript:void(0);" class="btn btn-lg bg-info text-white px-4 py-3 rounded-pill"> <i
-                                class="fa fa-spinner fa-pulse mr-1"></i> المزيد</a>
+                    <div class="col-12 my-5 wow bounceIn">
+                            <ul>
+                                    {{ $faqs->links() }}
+                            </ul>
                     </div>
                 </div>
             </div>

@@ -70,7 +70,7 @@ $factory->define(App\Model\Gallery::class, function (Faker $faker) {
     return [
         
       
-        'user_id' =>$faker->randomElement($array = range (1,5)) ,
+        'user_id' =>1 ,
     ];
 });
 $factory->define(App\Model\News::class, function (Faker $faker) {
@@ -79,7 +79,7 @@ $factory->define(App\Model\News::class, function (Faker $faker) {
         'title' => $faker->name,
         'description' => " قبت بالولايات في حين. ان يقوم الدنمارك أخذ, الأمم وقامت المتّبعة ان وقد, كل دول واتّجه وبالتحديد،. قد إحكام الأولى وقوعها، قام, قد بين أواخر الصفحات, عل شيء لإعلان الأمور المتحدة. أعمال باستحداث عن حين, كل عدد لأداء أوروبا الفرنسية, بهيئة اليها لان قد. ومن كثيرة الشّعبين ثم, فصل ٣٠ أوسع الثالث. لان هو ويتّفق الأهداف. كل اتفاق أفريقيا لها, دفّة الإتحاد به، بـ, لإعادة مقاومة الشتوية مكن تم. ",
         'date' => $faker->date,
-        'user_id' =>$faker->randomElement($array = range (1,5)) ,
+        'user_id' =>1 ,
     ];
 });
 $factory->define(App\Model\Question::class, function (Faker $faker) {
@@ -87,7 +87,7 @@ $factory->define(App\Model\Question::class, function (Faker $faker) {
     return [
         'question' => substr($faker->text , 0 , 20) ,
         'answer' => $faker->text,
-        'user_id' =>$faker->randomElement($array = range (1,5)) ,
+        'user_id' =>1 ,
     ];
 });
 
