@@ -1,11 +1,11 @@
 /* Import Ciro Font */
-@import url('../fonts?family=Cairo');
+@import url('../fonts/Tajawal?family=Tajawal');
 
 body {
   direction: rtl;
   text-align: right;
-  font-family: 'Cairo', sans-serif;
-  letter-spacing: -1px;
+  font-family: 'Tajawal', sans-serif;
+  letter-spacing: 0px;
 }
 
 nav.topHead {
@@ -15,6 +15,7 @@ nav.topHead {
 
 nav.mainNav {
   background-color: rgba(21, 22, 22, 0.8);
+  z-index: 9;
 }
 
 nav.mainNav ul.navbar-nav li.nav-item a.nav-link {
@@ -55,7 +56,7 @@ nav .navbar-toggler span {
 header {
   position: relative;
   top: -57px;
-  z-index: -1;
+  z-index: 1;
   margin-bottom: -57px;
 }
 
@@ -67,6 +68,32 @@ header .carousel-item {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+header .carousel-item .overlay {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.3);
+  height: 80vh;
+  min-height: 300px;
+}
+
+header .carousel-item .slide-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+}
+
+header .carousel-item .slide-content h3 {
+  font-size: 50px;
+  text-shadow: 1px 1px 1px #000;
+  margin-bottom: 20px;
+}
+
+header .carousel-item .slide-content p {
+  font-size: 20px;
 }
 
 .social-media-box {
@@ -420,9 +447,16 @@ footer {
   background-color: #151616;
 }
 
+footer img {
+  background-color: #fff;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  vertical-align: top;
+}
+
 footer a,
 footer p {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 footer a:hover {
@@ -501,4 +535,28 @@ section.faq-section .card .card-header:hover {
 
 .error-page p {
   margin-bottom: 50px;
+}
+
+.pagination ul {
+  background-color: #3d9ac7;
+  border-radius: 30px;
+  margin: 10px auto;
+  padding: 5px 10px;
+  display: inline-flex;
+  list-style: none;
+  direction: ltr;
+}
+
+.pagination ul li {
+  margin: 5px;
+}
+
+.pagination ul li.active a {
+  color: #151616;
+}
+
+.pagination ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
 }

@@ -13,7 +13,7 @@ Route::namespace('BackEnd')->prefix('admin')->group(function(){
         Route::resource('news', 'NewsController');
         Route::resource('questions', 'QuestionController');
         Route::resource('users', 'UserController')->middleware('checkAdmin');
-        // Route::get('lock', 'PrefController@lock')->name('lock');
+        Route::get('lock', 'PrefController@lock')->name('lock');
        
     });
 });
@@ -31,7 +31,7 @@ Route::namespace('FrontEnd')->group(function(){
     
 });
 Route::fallback(function () {
-    
+    return "test";
    return redirect()->route("404");
    return view('front-end.404');
 });

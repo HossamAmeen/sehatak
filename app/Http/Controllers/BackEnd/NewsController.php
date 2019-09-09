@@ -46,6 +46,6 @@ class NewsController extends BackEndController
         $requestArray['user_id'] = Auth::user()->id;
         $row->update($requestArray);
         session()->flash('action', 'تم التحديث بنجاح');
-        return redirect()->route($this->getClassNameFromModel().'.edit' , ['id' => $row->id]);
+        return redirect()->route($this->getClassNameFromModel().'index');
     }
 }

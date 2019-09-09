@@ -22,36 +22,39 @@
                 </div>
             </div>
             <div class="container mt-2">
-                <div class="row">
-                    <!-- News Items -->
-                    @foreach ($news as $item)
-                        
-                   
-                    <div class="col-12 news-item wow bounceInUp">
-                        <div class="row">
-                            <div class="col-lg-6 col-xs-12 mb-2">
-                                <img src="{{asset('uploads/news/'.$item->image)}} " class="img-fluid" alt="news item">
+                    <div class="row">
+                        <!-- News Items -->
+                        @foreach ($news as $item)
+                        <div class="col-12 news-item wow bounceInUp">
+                            <div class="row">
+                                <div class="col-lg-6 col-xs-12 mb-2">
+                                        <img src="{{asset('uploads/news/'.$item->image)}} " class="img-fluid" alt="news item">
+                                </div>
+                                <div class="col-lg-6 col-xs-12 text-left">
+                                    <h3>
+                                            <a href="{{route('news' ,  $item->id ) }}">{{$item->title}}</a>
+                                    </h3>
+                                    <p>     {{substr( $item->description , 0 , 800 )}}</p>
+                                    <span>{{$item->date}}</span>
+                                </div>
                             </div>
-                            <div class="col-lg-6 col-xs-12 text-left">
-                                <h3>
-                                    <a href="{{route('news' ,  $item->id ) }}">{{$item->title}}</a>
-                                </h3>
-                                <p>
-                                        {{substr( $item->description , 0 , 800 )}}
-                                </p>
-                                <span>{{$item->date}}</span>
+                        </div>
+                        @endforeach
+                        {{ $news->links() }}
+                        <!-- End News Items -->
+                        <!-- Pagination -->
+                        <div class="col-12 my-5 wow bounceIn">
+                              
+                            <div class="pagination">
+                                 
+                                <ul>
+                                       
+                                </ul>
                             </div>
                         </div>
                     </div>
-                    @endforeach
-                    <!-- End News Items -->
-                    <!-- More Button -->
-                    <div class="col-12 my-5 wow bounceIn">
-                        <a href="javascript:void(0);" class="btn btn-lg bg-info text-white px-4 py-3 rounded-pill"> <i
-                                class="fa fa-spinner fa-pulse mr-1"></i> المزيد</a>
-                    </div>
                 </div>
-            </div>
+            
         </section>
     </div>
 @endsection

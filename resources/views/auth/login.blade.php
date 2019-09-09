@@ -70,7 +70,7 @@
                             <i class="glyphicon glyphicon-user"></i>
 
                         </div>
-                        <h3>login forum</h3>
+                        <h3>login form</h3>
                         <div class="social-btn-login">
                             <ul>
                                 {{-- <li><a href="javascript:void(0)"><i class="fa fa-facebook"></i></a></li>
@@ -99,6 +99,18 @@
                                  <strong>sorry</strong> {{ $message }}
                             </div>
                             @enderror
+                            @error('email')
+                            <div class="alert alert-danger">
+                            <span class="invalid-feedback" role="alert">
+                                <strong>هذا البريد غير مسجل </strong>
+                            </span>
+                             </div>
+                             @enderror
+                             @if (session('status'))
+                             <div class="alert alert-success" role="alert">
+                                 {{ session('status') }}
+                             </div>
+                            @endif
                             <div class="input-group ls-group-input">
                                 <input id="text" type="text" class="form-control @error('login') is-invalid @enderror"
                                  name="login" value="{{ old('login') }}" required autocomplete="login" autofocus>
@@ -119,32 +131,33 @@
                                 @enderror
                             </div>
 
-                            <div class="remember-me">
-                                <input class="switchCheckBox" type="checkbox" checked data-size="mini"
-                                         name="remember" id="remember"
-                                       data-on-text="<i class='fa fa-check'><i>"
-                                       data-off-text="<i class='fa fa-times'><i>" {{ old('remember') ? 'checked' : '' }}>
-                                            
-                                <span>Remember me</span>
-                            </div>
+                            
                             <div class="input-group ls-group-input login-btn-box">
                                 <button class="btn ls-dark-btn ladda-button col-md-12 col-sm-12 col-xs-12" data-style="slide-down">
                                     <span class="ladda-label"><i class="fa fa-key"></i></span>
                                 </button>
                                
-
+                             @if (Route::has('password.request'))
+                                {{-- <a  href="{{ route('password.request') }}">
+                                    {{ __('Forgot Your Password?') }}
+                                </a> --}}
+                            @endif
                                 <a class="forgot-password" href="javascript:void(0)">Forgot password</a>
                             </div>
                         </form>
                     </div>
                     <div class="forgot-pass-box">
-                        <form action="#" class="form-horizontal ls_form">
+                        {{-- <form action="{{ route('password.email') }}" class="form-horizontal ls_form"> --}}
+                        <form method="post" action="{{ route('password.email') }}">
+                                @csrf
+                            
                             <div class="input-group ls-group-input">
-                                <input class="form-control" type="text" placeholder="someone@mail.com">
+                                <input class="form-control" type="email" placeholder="someone@mail.com"  name="email" value="{{ old('email') }}" required autocomplete="email">
+                               
                                 <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
                             </div>
                             <div class="input-group ls-group-input login-btn-box">
-                                <button class="btn ls-dark-btn col-md-12 col-sm-12 col-xs-12">
+                                <button class="btn ls-dark-btn col-md-12 col-sm-12 col-xs-12" type="submit">
                                     <i class="fa fa-rocket"></i> Send
                                 </button>
 

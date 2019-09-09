@@ -1,0 +1,218 @@
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {}
+
+/* End @media (min-width: 1281px) */
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 992px to 1280px
+*/
+
+@media (min-width: 992px) and (max-width: 1280px) {}
+
+/* End @media (min-width: 992px) and (max-width: 1280px) */
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 769px to 991px
+*/
+
+@media (min-width: 769px) and (max-width: 991px) {
+  .navbar-collapse {
+    text-align: center;
+    background-color: #094b68;
+    margin-top: 10px;
+  }
+
+  .navbar-collapse ul.navbar-nav {
+    padding: 0px;
+  }
+
+  .navbar-collapse ul.navbar-nav li.nav-item {
+    border-bottom: 2px solid #000;
+    margin-right: 0px !important;
+  }
+
+  .navbar-collapse ul.navbar-nav li.nav-item:last-child {
+    border-bottom: 0px;
+  }
+
+  nav.mainNav ul.navbar-nav li.nav-item a.active,
+  nav.mainNav ul.navbar-nav li.nav-item a.nav-link:hover {
+    color: #fff;
+    border-bottom: 0px;
+    background-color: #3d9ac7;
+  }
+}
+
+/* End @media (min-width: 769px) and (max-width: 991px) */
+
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {}
+
+/* End @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) */
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 768px
+*/
+
+@media (min-width: 481px) and (max-width: 768px) {
+  header .carousel-item .slide-content h3 {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+  
+  header .carousel-item .slide-content p {
+    font-size: 15px;
+  }
+
+  footer a,
+  footer p {
+    font-size: 15px
+  }
+
+  section.twoGrid-section .box-info {
+    order: 1;
+  }
+
+  .navbar-collapse {
+    text-align: center;
+    background-color: #094b68;
+    margin-top: 10px;
+  }
+
+  .navbar-collapse ul.navbar-nav {
+    padding: 0px;
+  }
+
+  .navbar-collapse ul.navbar-nav li.nav-item {
+    border-bottom: 2px solid #000;
+    margin-right: 0px !important;
+  }
+
+  .navbar-collapse ul.navbar-nav li.nav-item:last-child {
+    border-bottom: 0px;
+  }
+
+  nav.mainNav ul.navbar-nav li.nav-item a.active,
+  nav.mainNav ul.navbar-nav li.nav-item a.nav-link:hover {
+    color: #fff;
+    border-bottom: 0px;
+    background-color: #3d9ac7;
+  }
+}
+
+/* End @media (min-width: 481px) and (max-width: 767px) */
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  header .carousel-item .slide-content h3 {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+  
+  header .carousel-item .slide-content p {
+    font-size: 15px;
+  }
+  .navbar-collapse {
+    text-align: center;
+    background-color: #094b68;
+    margin-top: 10px;
+  }
+
+  .navbar-collapse ul.navbar-nav {
+    padding: 0px;
+  }
+
+  .navbar-collapse ul.navbar-nav li.nav-item {
+    border-bottom: 2px solid #000;
+    margin-right: 0px !important;
+  }
+
+  .navbar-collapse ul.navbar-nav li.nav-item:last-child {
+    border-bottom: 0px;
+  }
+
+  nav.mainNav ul.navbar-nav li.nav-item a.active,
+  nav.mainNav ul.navbar-nav li.nav-item a.nav-link:hover {
+    color: #fff;
+    border-bottom: 0px;
+    background-color: #3d9ac7;
+  }
+
+  .box-info img,
+  .box-primary img {
+    width: 120px;
+    height: 120px;
+  }
+
+  section.timeline-section .timeline-item h5 {
+    font-size: 17px;
+  }
+
+  section.gallery-section .carousel-item {
+    height: 200px;
+    min-height: 200px;
+  }
+
+  section.twoGrid-section .box-info {
+    order: 1;
+  }
+
+  section.twoGrid-section p {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  section.faq-section .card .card-header button.btn-link {
+    font-size: 17px;
+  }
+
+  .news-page section.news-section .news-item h3 a {
+    font-size: 22px;
+  }
+
+  .news-page section.news-section .news-item p {
+    font-size: 15px;
+  }
+
+  section.news-section h2 {
+    font-size: 30px;
+  }
+
+  .timeline-page section.timeline-section .timeline-item h5 {
+    font-size: 20px;
+  }
+
+  .social-media-box ul li a {
+    font-size: 20px;
+  }
+
+  .social-media-box ul li {
+    padding: 3px 10px;
+    margin: 2px 1px;
+  }
+
+  header .carousel-item {
+    height: 50vh;
+  }
+  .error-page h1 {
+    font-size: 100px;
+    font-weight: 900
+  }
+}
+
+/* End @media (min-width: 320px) and (max-width: 480px) */

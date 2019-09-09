@@ -10,12 +10,36 @@
       <div class="carousel-inner" role="listbox">
         <!-- Slide One - Set the background image for this slide in the line below -->
         <div class="carousel-item active" style="background-image: url('{!! asset('web/img/slider-img1.png') !!}')">
+          <div class="overlay"></div>
+                <div class="slide-content">
+                  <h3 class="wow bounceInUp">لماذا مشروع صحتك</h3>
+                  <p class="wow bounceInUp">التكلفة الإجمالية للمجمع بجميع التجهيزات 50000000 جنيه مصري ( خمسون مليون جنيه
+                    مصري) وتشمل تكلفة شراء
+                    العقار الخاص بالمجمع وتكلفة كافة التجهيزات و شراء الأجهزة الطبية والمبلغ قابلة للزيادة والنقصان في حالة
+                    تغير أسعار التجهيزات الخاصة بالمجمع</p>
+                </div>
         </div>
         <!-- Slide Two - Set the background image for this slide in the line below -->
         <div class="carousel-item " style="background-image: url('{!! asset('web/img/slider-img1.png') !!}')">
+          <div class="overlay"></div>
+                <div class="slide-content">
+                  <h3 class="wow bounceInUp">لماذا مشروع صحتك</h3>
+                  <p class="wow bounceInUp">التكلفة الإجمالية للمجمع بجميع التجهيزات 50000000 جنيه مصري ( خمسون مليون جنيه
+                    مصري) وتشمل تكلفة شراء
+                    العقار الخاص بالمجمع وتكلفة كافة التجهيزات و شراء الأجهزة الطبية والمبلغ قابلة للزيادة والنقصان في حالة
+                    تغير أسعار التجهيزات الخاصة بالمجمع</p>
+                </div>
         </div>
         <!-- Slide Three - Set the background image for this slide in the line below -->
         <div class="carousel-item " style="background-image: url('{!! asset('web/img/slider-img1.png') !!}')">
+          <div class="overlay"></div>
+                <div class="slide-content">
+                  <h3 class="wow bounceInUp">لماذا مشروع صحتك</h3>
+                  <p class="wow bounceInUp">التكلفة الإجمالية للمجمع بجميع التجهيزات 50000000 جنيه مصري ( خمسون مليون جنيه
+                    مصري) وتشمل تكلفة شراء
+                    العقار الخاص بالمجمع وتكلفة كافة التجهيزات و شراء الأجهزة الطبية والمبلغ قابلة للزيادة والنقصان في حالة
+                    تغير أسعار التجهيزات الخاصة بالمجمع</p>
+                </div>
         </div>
       </div>
     </div>
@@ -184,6 +208,7 @@
             <div class="carousel-inner" role="listbox">
               <!-- Slide One - Set the background image for this slide in the line below -->
               <div class="carousel-item active" style="background-image: url('{!! asset('web/img/demo-img.png') !!}">
+              
               </div>
               <!-- Slide Two - Set the background image for this slide in the line below -->
               <div class="carousel-item" style="background-image: url('{!! asset('web/img/demo-img.png')!!}">

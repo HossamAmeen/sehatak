@@ -10,7 +10,8 @@
 
   {{-- <title>{{$brefs->title}} - {{$pageTitle}}</title> --}}
   <title> {{ config('app.name' . $pageTitle , $brefs->title .'-'. $pageTitle) }}</title>
- 
+  <!-- Favicon -->
+  <link rel="icon" href="{{asset('web/img/favicon.png')}}" sizes="16x16" type="image/png">
   <!-- Bootstrap core CSS -->
   <link href="{{asset('web/vendor/bootstrapRTL/css/bootstrap-rtl.min.css')}}" rel="stylesheet">
   <!-- fontawesome -->
@@ -30,7 +31,7 @@
         <nav class="topHead"></nav>
         <nav class="navbar mainNav navbar-expand-lg">
             <div class="container">
-              <a class="navbar-brand" href="index.html">
+              <a class="navbar-brand" href="{{route('index')}}">
                 <img src="{{asset('web/img/logo.png')}}" alt="Logo">
               </a>
               <button class="navbar-toggler navbar-toggler-left ml-auto" type="button" data-toggle="collapse"
@@ -81,53 +82,70 @@
         </div>
         <!-- Page Content -->
           @yield('content')
-
   <!-- Footer -->
-  <footer class="py-5">
-    <div class="container">
-      <div class="row align-items-baseline">
-        <div class="col-md-8 col-12">
-          <div class="row">
-            <div class="col-md-12 col-12">
-              <p class="text-white">
-                <i class="fa fa-map-marker m-1"></i>
-              <span>المقر الأدارى : {{ isset($brefs->address) ? $brefs->address : '' }}</span>
-              </p>
-            </div>
-            <div class="col-md-4 col-6">
-              <a href="javascript:void(0);" class="text-white">
-                {{ isset($brefs->phone) ? $brefs->phone : '' }}
-                <i class="fa fa-phone border py-1 px-2 m-1 rounded-circle"></i>
-              </a>
-            </div>
-            <div class="col-md-4 col-6">
-              <a href="javascript:void(0);" class="text-white">
-                {{ isset($brefs->phone2) ? $brefs->phone2 : '' }}
-                <i class="fa fa-phone border py-1 px-2 m-1 rounded-circle"></i>
-              </a>
-            </div>
+  <footer class="pt-5 pb-3">
+      <div class="container">
+        <div class="row align-items-baseline">
+          <div class="col-lg-5 col-12 text-center">
+            <img src="{{asset('web/img/logo.png')}}" width="100" class="img-fluid mb-3" alt="Footer Logo">
+            <p class="text-white">
+              مشروع إنشاء اكبرمجمع طبي تخصصى بوسط مدينة أسيوط احدى مشروعات مجموعة ( استثمر) للاقتصاد التشاركي
+            </p>
           </div>
-        </div>
-        <div class="col-md-4 col-12 text-right mt-md-0 mt-2">
-          <div class="row">
-            <div class="col-12 mb-3">
-              <a href=" {{ isset($brefs->facebook) ? $brefs->facebook : '' }}" class="text-white">
-                {{ isset($brefs->facebook) ? $brefs->facebook : '' }}
-                <i class="fa fa-facebook border py-1 px-2 m-1 rounded-circle"></i>
-              </a>
-            </div>
-            <div class="col-12">
-              <a href="javascript:void(0);" class="text-white">
-                {{ isset($brefs->email) ? $brefs->email : '' }}
-                <i class="fa fa-envelope-o px-2"></i>
-              </a>
-            </div>
+          <div class="col-lg-3 col-md-6 col-12">
+            <h4 class="text-white mb-3">روابط هامة</h4>
+            <ul class="text-white">
+              <li>
+                <a class="text-white" href="{{route('index')}}">الرئيسية</a>
+              </li>
+              <li>
+                <a class="text-white" href="{{route('about')}}">عن المشروع</a>
+              </li>
+              <li>
+                <a class="text-white" href="{{route('news')}}">الأخبار</a>
+              </li>
+              <li>
+                <a class="text-white" href="{{route('timeline')}}">الجدول الزمنى</a>
+              </li>
+              <li>
+                <a class="text-white" href="{{route('gallery')}}">معرض الصور</a>
+              </li>
+              <li>
+                <a class="text-white"href="{{route('faq')}}">الأسئلة الشائعة</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-md-6 col-12">
+            <h4 class="text-white mb-3">تواصل معنا</h4>
+            <p class="text-white">
+              <i class="fa fa-map-marker m-1"></i>
+              <span>المقر الأدارى : {{ isset($brefs->address) ? $brefs->address : '' }}</span>
+            </p>
+            <a href="javascript:void(0);" class="text-white d-block">
+              <i class="fa fa-phone border py-1 px-2 mb-1 rounded-circle"></i>
+              {{ isset($brefs->phone) ? $brefs->phone : '' }}
+            </a>
+            <a href="javascript:void(0);" class="text-white d-block">
+              <i class="fa fa-phone border py-1 px-2 mb-1 rounded-circle"></i>
+              {{ isset($brefs->phone2) ? $brefs->phone2 : '' }}
+            </a>
+            <a href="javascript:void(0);" class="text-white d-block">
+              <i class="fa fa-facebook border py-1 px-2 mb-1 rounded-circle"></i>
+              {{ isset($brefs->facebook) ? $brefs->facebook : '' }}
+            </a>
+            <a href="javascript:void(0);" class="text-white d-block">
+              <i class="fa fa-envelope-o px-2"></i>
+              {{ isset($brefs->email) ? $brefs->email : '' }}
+            </a>
+          </div>
+          <div class="col-12 text-center border-top mt-2">
+            <p class="text-white mt-2">كل الحقوق محفوظة لمستشفى صحتك &copy; 2019 | صمم بواسطة <a
+                href="javascript:void(0);" class="text-blue">Zedy</a></p>
           </div>
         </div>
       </div>
-    </div>
-    <!-- /.container -->
-  </footer>
+      <!-- /.container -->
+    </footer>
   
   <!-- Bootstrap core JavaScript -->
   <script src="{{asset('web/vendor/jquery/jquery.min.js')}}"></script>

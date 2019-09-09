@@ -24,11 +24,12 @@ class HomeController extends Controller
     public function news($id= null)
     {
         if($id == null )
-        $news = News::all()->sortByDesc("id");
+        $news = News::paginate(8);
         else
         $news = News::findorfail($id);
         $pageTitle = "خبر المشروع" ;
        
+        // return $news;
         if($id == null )
         return view('front-end.news', compact(
             'news',

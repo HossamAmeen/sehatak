@@ -52,3 +52,46 @@
                     </table>
     @endcomponent
 @endsection
+
+ {{-- @push('js')
+
+ 
+
+  <!--botbox library script-->
+  <script src="{{asset('panel/assets/js/bootbox.min.js')}}"></script>
+    
+  <script type="text/javascript">
+    $('.check').click(function(){
+        $url = $(this).attr('href');
+        bootbox.dialog({
+            message: "هل أنت متأكد من أنك تريد القيام بهذه العملية؟",
+            title: "تأكيد القيام بالعملية",
+            buttons: {
+                success: {
+                    label: "نعم!",
+                    className: "btn-success",
+                    callback: function() {
+
+                        if($url == undefined)
+                            $('form').submit();
+                        else{
+                            console.log("should go to " + $url);
+                            window.location = $url;
+
+                        }
+                    }
+                },
+                danger: {
+                    label: "لا!",
+                    className: "btn-danger",
+                    callback: function() {
+                        //Example.show("uh oh, look out!");
+                    }
+                },
+
+            }
+        });
+        return false;
+    });
+    </script>
+@endpush --}}

@@ -15,9 +15,7 @@ if($row->role == 1 )
     @component('back-end.layout.header')
         @slot('nav_title')
             {{ $pageTitle }}
-            <a href="{{ route($routeName.'.create') }}">  
-                    <button class="alert-success"> <i class="fa fa-plus"></i> </button>
-            </a>
+           
         @endslot
     @endcomponent
 
@@ -36,9 +34,45 @@ if($row->role == 1 )
                 >  
                 @csrf
                 {{method_field('PUT')}}
+                @if($row == Auth::user())
                 @include('back-end.'.$folderName.'.form')    
-                <img src="{{asset("uploads/".$routeName.'/'.$row->image)}}" height="300px" width="300px" style="margin:0 10%;"> <br><br>
+                @else
+                @php $input = "role"; @endphp  
                 <div class="form-group">
+                        <label class="col-md-2 col-sm-2 col-xs-12 control-label">الصلاحيه</label>
+
+                        <div class="col-md-5 col-sm-5 col-xs-12 ls-group-input">
+                            <div class="radio">
+                                <label class="radio">
+                                    <input type="radio" name="{{ $input }}" id="optionsRadios1" value="1" 
+                                    @if ( isset($row))
+                                    @if($row->role == 1 ) checked @endif
+                                    @else
+                                        checked
+                                    @endif > 
+                                    مسؤول
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label class="radio">
+                                    <input type="radio" name="{{ $input }}" id="optionsRadios2" value="0"  
+                                    @if ( isset($row))
+                                    @if($row->role == 0 ) checked @endif
+                                    @endif
+                                    > 
+                                موظف
+                                </label>
+                            </div>
+                        </div>
+                        @error($input)
+                        <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                        </span>
+                        @enderror
+                </div>  
+               
+                @endif
+               <div class="form-group">
                     <div class="col-lg-offset-2 col-lg-10">
                         <button class="btn btn-info" type="submit">  تعديل  </button>
                     </div>
