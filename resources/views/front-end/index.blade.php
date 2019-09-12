@@ -112,18 +112,20 @@
     </div>
     <div class="container pt-3 pb-5">
       <div class="row">
-        @foreach ($news as $item) 
+        @foreach ($news as $item)
+        
         <div class="col-lg-4 col-sm-6 mx-auto news-item wow bounceInUp">
             <div class="card h-100">
-              <a href="{{route('news' ,  $item->id ) }}"><img class="card-img-top" src="{{asset('uploads/news/'.$item->image)}}" alt=""></a>
+                <a href="{{route('news' ,  $item->id ) }}"><img class="card-img-top" src="{{asset('uploads/news/'.$item->image)}}" alt=""></a>
               <div class="card-body">
+                <h3><a class="text-center text-primary" href="new-details.html">{{ $item->title }}</a></h3>
+                <small class="d-block text-muted mb-2">{{ $item->date }}</small>
                 <strong class="card-text text-primary">{{substr( $item->description , 0 , 800 )}}</strong>
+              
               </div>
             </div>
-        </div>  
-        @endforeach
-        
-        
+          </div>
+        @endforeach      
         <div class="col-12 wow bounceIn">
           <a href="{{route('news')}}"
             class="more-btn btn btn-lg btn-light rounded-pill text-primary font-weight-bold">المزيد</a>
