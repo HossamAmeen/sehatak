@@ -66,18 +66,27 @@
 
         <div class="social-media-box">
         <ul>
+          @if(isset($brefs->facebook) )
           <li>
-              <a href="{{ isset($brefs->facebook) ? $brefs->facebook : '' }}" target="_blank"><i class="fa fa-facebook"></i></a>
+          <a href="{{$brefs->facebook}}" target="_blank"><i class="fa fa-facebook"></i></a>
           </li>
+          @endif
+          @if(isset($brefs->facebook) )
           <li>
-            <a href="{{ isset($brefs->phone) ? $brefs->phone : '' }}" target="_blank"><i class="fa fa-whatsapp"></i></a>
+          <a href="https://wa.me/{{$brefs->phone}}" target="_blank"><i class="fa fa-whatsapp"></i></a>
           </li>
+          @endif
+          @if(isset($brefs->instagram) )
           <li>
-            <a href="{{ isset($brefs->instagram) ? $brefs->instagram : '' }}" target="_blank"><i class="fa fa-instagram"></i></a>
+          <a href="{{$brefs->instagram}}" target="_blank"><i class="fa fa-instagram"></i></a>
           </li>
+          @endif
+          @if(isset($brefs->phone2) )
           <li>
-            <a href="https://wa.me/{{ isset($brefs->phone2) ? $brefs->phone2 : '' }}" target="_blank"><i class="fa fa-phone"></i></a>
+          <a href="https://wa.me/{{$brefs->phone2}}" target="_blank"><i class="fa fa-phone"></i></a>
           </li>
+          @endif
+        
         </ul>
         </div>
         <!-- Page Content -->
@@ -119,24 +128,34 @@
             <h4 class="text-white mb-3">تواصل معنا</h4>
             <p class="text-white">
               <i class="fa fa-map-marker m-1"></i>
-              <span>المقر الأدارى : {{ isset($brefs->address) ? $brefs->address : '' }}</span>
+              @if(isset($brefs->address))
+              <span>المقر الأدارى : {{ $brefs->address}}</span>
+              @endif
             </p>
-            <a href="javascript:void(0);" class="text-white d-block">
+            @if(isset($brefs->phone))
+            <a href="https://wa.me/{{$brefs->phone}}" class="text-white d-block">
               <i class="fa fa-phone border py-1 px-2 mb-1 rounded-circle"></i>
-              {{ isset($brefs->phone) ? $brefs->phone : '' }}
+              {{ $brefs->phone  }}
             </a>
-            <a href="javascript:void(0);" class="text-white d-block">
+            @endif
+            @if(isset($brefs->phone2))
+            <a href="https://wa.me/{{$brefs->phone2}}" class="text-white d-block">
               <i class="fa fa-phone border py-1 px-2 mb-1 rounded-circle"></i>
-              {{ isset($brefs->phone2) ? $brefs->phone2 : '' }}
+              {{ $brefs->phone2 }}
             </a>
-            <a href="javascript:void(0);" class="text-white d-block">
+            @endif
+            @if(isset($brefs->facebook))
+            <a href=" {{ $brefs->facebook  }}" class="text-white d-block">
               <i class="fa fa-facebook border py-1 px-2 mb-1 rounded-circle"></i>
-              {{ isset($brefs->facebook) ? $brefs->facebook : '' }}
+              {{ $brefs->facebook  }}
             </a>
-            <a href="javascript:void(0);" class="text-white d-block">
+            @endif
+            @if(isset($brefs->email))
+            <p href="javascript:void(0);" class="text-white d-block">
               <i class="fa fa-envelope-o px-2"></i>
-              {{ isset($brefs->email) ? $brefs->email : '' }}
-            </a>
+              {{ $brefs->email  }}
+            </p>
+            @endif
           </div>
           <div class="col-12 text-center border-top mt-2">
             <p class="text-white mt-2">كل الحقوق محفوظة لمستشفى صحتك &copy; 2019 | صمم بواسطة <a

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\BackEnd;
 use Auth;
+use App\Http\Requests\BackEnd\NewsRequest;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Model\News;
@@ -11,7 +12,7 @@ class NewsController extends BackEndController
     {
         parent::__construct($model);
     }
-    public function store(Request $request){
+    public function store(NewsRequest $request){
        
         $requestArray = $request->all();
         if($request->hasFile('image'))
@@ -30,7 +31,7 @@ class NewsController extends BackEndController
         return redirect()->route($this->getClassNameFromModel().'.index');
     }
 
-    public function update($id , Request $request){
+    public function update($id , NewsRequest $request){
         $requestArray = $request->all();
         if($request->hasFile('image'))
         {
