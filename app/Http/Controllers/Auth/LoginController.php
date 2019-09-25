@@ -60,8 +60,8 @@ class LoginController extends Controller
         return $this->username;
     }
     public function logout(Request $request)
-{
-    $this->performLogout($request);
-    return redirect()->route('login');
-}
+    {
+        $this->performLogout($request);
+        return redirect()->route('login');
+    }
 }

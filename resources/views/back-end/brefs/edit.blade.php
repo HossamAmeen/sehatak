@@ -80,10 +80,10 @@
                                 <div class="form-group">
                                         <label class="col-lg-3 control-label"> الموبيل 2</label>
                                         <div class="col-lg-6">
-                                            <input type="text" class="form-control" name="phone"
+                                            <input type="text" class="form-control" name="phone2"
                                                 data-bv-message="The username is not valid"
                                                  data-bv-notempty-message="The username is  and cannot be empty"
-                                                 value="{{$row->phone}}"
+                                                 value="{{$row->phone2}}"
                                                     />
                                         </div>
                                 </div>
@@ -140,7 +140,7 @@
                                 
                                 <div class="panel-body no-padding" >
                                     <textarea class="summernote" name="descriptionPoint" id="demo" >
-                                           {{$row->descriptionPoint}}
+                                        {!!html_entity_decode($row->descriptionPoint)!!}  
                                     </textarea>
                                 </div><br>
                                 <div class="form-group">

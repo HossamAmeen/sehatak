@@ -25,8 +25,8 @@ class NewsRequest extends FormRequest
     {
      
         return [
-            'title' => ['required', 'string', 'max:255'],
-            'description' => ['required', 'string', 'max:255'],
+            'title' => ['required', 'string'],
+            'description' => ['required', 'string'],
             'date' => ['required', 'date'],
             'image' => ['image'],
         ];

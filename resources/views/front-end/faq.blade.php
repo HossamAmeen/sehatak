@@ -26,19 +26,20 @@
                     <!-- FAQ Items -->
                     @foreach ($faqs as $item)
                     <div class="col-12 card wow bounceInUp">
-                        <div class="card-header" id="headingOne">
+                        <div class="card-header" id="{{$item->id}}">
                             <h5 class="mb-0">
-                                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
-                                    aria-expanded="true" aria-controls="collapseOne">
+                                <button class="btn btn-link" data-toggle="collapse" data-target="#collapse{{$item->id}}"
+                                    aria-expanded="true" aria-controls="collapse{{$item->id}}">
                                     {{$item->question}}
                                 </button>
                             </h5>
                         </div>
 
-                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                        <div id="collapse{{$item->id}}" class="collapse show" aria-labelledby="{{$item->id}}"
                             data-parent="#accordion">
                             <div class="card-body"> 
-                                {{$item->answer}}
+                                    {!!html_entity_decode($item->answer)!!}
+                                
                             </div>
                         </div>
                     </div>

@@ -34,8 +34,8 @@
                             @foreach ($rows as $item)
                                  <tr>
                                     <td> {{$row_num++}}</td>
-                                    <td>{{substr( $item->question , 0 , 30 ) }}</td>
-                                    <td>{{substr( $item->answer , 0 , 30 ) }}</td>
+                                    <td>{{$item->question}}</td>
+                                    <td> {!!html_entity_decode($item->answer)!!}</td>
                                     <td>{{ isset($item->user) ? $item->user->user_name : '' }}</td>
                                     <td>
                                      @include('back-end.shared.buttons.delete')

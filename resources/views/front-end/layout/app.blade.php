@@ -158,8 +158,8 @@
             @endif
           </div>
           <div class="col-12 text-center border-top mt-2">
-            <p class="text-white mt-2">كل الحقوق محفوظة لمستشفى صحتك &copy; 2019 | صمم بواسطة <a
-                href="javascript:void(0);" class="text-blue">Zedy</a></p>
+            <p class="text-white mt-2">كل الحقوق محفوظة لمستشفى صحتك &copy; 2019 | صمم بواسطة
+               <a href="http://www.z-edy.com/" class="text-blue">Zedy</a></p>
           </div>
         </div>
       </div>
