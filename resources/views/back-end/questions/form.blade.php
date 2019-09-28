@@ -22,8 +22,10 @@
                                         </div>
                                         @php $input = "answer"; @endphp
                                         <div class="panel-body no-padding" >
-                                            <textarea class="summernote" name="{{ $input }}"  id="demo" >
+                                            <textarea style="margin-right: 25%" name="{{ $input }}"  id="demo" rows="10" cols="100">
                                                     {{ isset($row) ? $row->{$input} : '' }}
                                             </textarea>
                                         </div><br>
+
+                                       
                                        

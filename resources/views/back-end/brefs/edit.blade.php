@@ -78,18 +78,6 @@
                                         </div>
                                 </div>
                                 <div class="form-group">
-                                        <label class="col-lg-3 control-label"> الموبيل 2</label>
-                                        <div class="col-lg-6">
-                                            <input type="text" class="form-control" name="phone2"
-                                                data-bv-message="The username is not valid"
-                                                 data-bv-notempty-message="The username is  and cannot be empty"
-                                                 value="{{$row->phone2}}"
-                                                    />
-                                        </div>
-                                </div>
-
-
-                                <div class="form-group">
                                 <label class="col-lg-3 control-label">  الايميل الاساسي</label>
                                 <div class="col-lg-6">
                                     <input type="text" class="form-control" name="email"
@@ -108,15 +96,7 @@
                                                     />
                                         </div>
                                 </div>
-                                <div class="form-group">
-                                        <label class="col-lg-3 control-label">facebook account</label>
-                                        <div class="col-lg-6">
-                                            <input type="text" class="form-control" name="facebook"
-                                             
-                                                 value="{{$row->facebook}}"
-                                                    />
-                                        </div>
-                                </div>
+                               
                                 <div class="form-group">
                                         <label class="col-lg-3 control-label"> instagram account</label>
                                         <div class="col-lg-6">

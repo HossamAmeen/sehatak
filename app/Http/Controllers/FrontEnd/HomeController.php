@@ -25,10 +25,18 @@ class HomeController extends Controller
     public function news($id= null)
     {
         if($id == null )
-        $news = News::orderBy('id', 'DESC')->paginate(8);
+        {
+            $pageTitle = "اخبار المشروع" ;
+            $news = News::orderBy('id', 'DESC')->paginate(8);
+        }
+       
         else
-        $news = News::findorfail($id);
-        $pageTitle = "خبر المشروع" ;
+        {
+            $news = News::findorfail($id);
+            $pageTitle = $news->title ;
+        }
+      
+       
        
         // return $news;
         if($id == null )
@@ -79,7 +87,7 @@ class HomeController extends Controller
     {
         $image = Gallery::all()->sortByDesc("id")->take(1)->first();
        
-        $images = Gallery::where('id' , '!=' , $image->id)->orderBy('id', 'DESC')->paginate(8);
+        $images = Gallery::where('id' , '!=' , $image->id)->orderBy('id', 'DESC')->paginate(9);
         
         $pageTitle = "معرض الصور" ;
         return view('front-end.gallery', compact(
@@ -91,9 +99,11 @@ class HomeController extends Controller
     }
     public function faq ()
     {
-        $faqs = Question::orderBy('id', 'DESC')->paginate(8);
+        $faq = Question::all()->sortByDesc("id")->take(1)->first();
+        $faqs = Question::where('id' , '!=' , $faq->id)->orderBy('id', 'DESC')->paginate(8);
         $pageTitle = "الاسئله الشائعه" ;
         return view('front-end.faq', compact(
+            'faq',
             'faqs',
             'pageTitle'
          

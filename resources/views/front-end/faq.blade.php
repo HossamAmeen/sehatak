@@ -23,19 +23,37 @@
             </div>
             <div class="container mt-2">
                 <div id="accordion" class="row">
+                     <div class="col-12 card wow bounceInUp">
+                        <div class="card-header" id="{{$faq->id}}">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link" data-toggle="collapse" data-target="#collapse{{$faq->id}}"
+                                    aria-expanded="true" aria-controls="collapse{{$faq->id}}">
+                                    {{$faq->question}}
+                                </button>
+                            </h5>
+                        </div>
+
+                        <div id="collapse{{$faq->id}}" class="collapse show" aria-labelledby="{{$faq->id}}"
+                            data-parent="#accordion">
+                            <div class="card-body"> 
+                                    {!!html_entity_decode($faq->answer)!!}
+                                
+                            </div>
+                        </div>
+                    </div>
                     <!-- FAQ Items -->
                     @foreach ($faqs as $item)
                     <div class="col-12 card wow bounceInUp">
                         <div class="card-header" id="{{$item->id}}">
                             <h5 class="mb-0">
-                                <button class="btn btn-link" data-toggle="collapse" data-target="#collapse{{$item->id}}"
-                                    aria-expanded="true" aria-controls="collapse{{$item->id}}">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse{{$item->id}}"
+                                    aria-expanded="false" aria-controls="collapse{{$item->id}}">
                                     {{$item->question}}
                                 </button>
                             </h5>
                         </div>
 
-                        <div id="collapse{{$item->id}}" class="collapse show" aria-labelledby="{{$item->id}}"
+                        <div id="collapse{{$item->id}}" class="collapse" aria-labelledby="{{$item->id}}"
                             data-parent="#accordion">
                             <div class="card-body"> 
                                     {!!html_entity_decode($item->answer)!!}

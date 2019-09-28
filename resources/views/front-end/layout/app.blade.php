@@ -16,6 +16,8 @@
   <link href="{{asset('web/vendor/bootstrapRTL/css/bootstrap-rtl.min.css')}}" rel="stylesheet">
   <!-- fontawesome -->
   <link href="{{asset('web/vendor/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
+    <!-- Light Box Master -->
+    <link href="{{asset('web/vendor/lightbox2-master/css/lightbox.min.css')}}" rel="stylesheet">
   <!-- Animate css -->
   <link href="{{asset('web/vendor/wow/animate.css')}}" rel="stylesheet">
 
@@ -73,7 +75,7 @@
           @endif
           @if(isset($brefs->facebook) )
           <li>
-          <a href="https://wa.me/{{$brefs->phone}}" target="_blank"><i class="fa fa-whatsapp"></i></a>
+          <a href="tel:{{$brefs->phone}}" target="_blank"><i class="fa fa-whatsapp"></i></a>
           </li>
           @endif
           @if(isset($brefs->instagram) )
@@ -138,18 +140,8 @@
               {{ $brefs->phone  }}
             </a>
             @endif
-            @if(isset($brefs->phone2))
-            <a href="https://wa.me/{{$brefs->phone2}}" class="text-white d-block">
-              <i class="fa fa-phone border py-1 px-2 mb-1 rounded-circle"></i>
-              {{ $brefs->phone2 }}
-            </a>
-            @endif
-            @if(isset($brefs->facebook))
-            <a href=" {{ $brefs->facebook  }}" class="text-white d-block">
-              <i class="fa fa-facebook border py-1 px-2 mb-1 rounded-circle"></i>
-              {{ $brefs->facebook  }}
-            </a>
-            @endif
+           
+          
             @if(isset($brefs->email))
             <p href="javascript:void(0);" class="text-white d-block">
               <i class="fa fa-envelope-o px-2"></i>
@@ -170,6 +162,7 @@
   <script src="{{asset('web/vendor/jquery/jquery.min.js')}}"></script>
   <script src="{{asset('web/vendor/bootstrapRTL/js/bootstrap.bundle.min.js')}}"></script>
   <script src="{{asset('web/vendor/sticky/jquery.sticky.js')}}"></script>
+  <script src="{{asset('web/vendor/lightbox2-master/js/lightbox.min.js')}}"></script>
   <script src="{{asset('web/vendor/wow/wow.min.js')}}"></script>
   <script src="{{asset('web/js/scripts.js')}}"></script>
 

@@ -32,7 +32,8 @@
                         </a>
                     </div>
                     @foreach ($images as $item)
-                         <!-- small item -->
+                      
+                   <!-- small item -->
                     <div class="col-lg-6 col-md-4 col-12 wow bounceInUp">
                         <a href="{{asset('uploads/galleries/'.$item->image)}}" data-lightbox="gallery" class="gallery-item">
                             <img src="{{asset('uploads/galleries/'.$item->image)}}" class="img-fluid" alt="Large Image">

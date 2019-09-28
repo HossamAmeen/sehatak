@@ -116,9 +116,9 @@
         
         <div class="col-lg-4 col-sm-6 mx-auto news-item wow bounceInUp">
             <div class="card h-100">
-                <a href="{{route('news' ,  $item->id ) }}"><img class="card-img-top" src="{{asset('uploads/news/'.$item->image)}}" alt=""></a>
+                <a href="{{route('news' ,  $item->id ) }}"><img class="card-img-top" src="{{asset('uploads/news/'.$item->image)}}" alt="" height="347" width="283"></a>
               <div class="card-body">
-                <h3><a class="text-center text-primary" href="new-details.html">{{ $item->title }}</a></h3>
+                <h3><a class="text-center text-primary" href="{{route('news' ,  $item->id ) }}">{{ $item->title }}</a></h3>
                 <small class="d-block text-muted mb-2">{{ $item->date }}</small>
                 <strong class="card-text text-primary">{{substr( $item->description , 0 , 800 )}}</strong>
               
@@ -241,7 +241,7 @@
     <div class="container-fluid  px-0">
       <div class="row no-gutters">
         <div class="col-12 box-primary d-lg-none d-block">
-          <h3 class="text-white text-center">الأقتصاد الأشتراكى</h3>
+          <h3 class="text-white text-center">الاقتصاد التشاركي</h3>
         </div>
         <div class="col-lg-8 box-info px-5">
           <h3 class="text-white text-center mb-5 d-lg-block d-none wow bounceIn">الأقتصاد الأشتراكى</h3>
