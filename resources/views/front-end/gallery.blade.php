@@ -24,13 +24,13 @@
             </div>
             <div class="container mt-2">
                 <div class="row">
-                    <!-- Large Image -->
+                    {{-- <!-- Large Image -->
                     <div class="col-12 wow bounceInUp">
                         <a href="{{asset('uploads/galleries/'.$image->image)}}" data-lightbox="gallery" class="gallery-item">
                             <img src="{{asset('uploads/galleries/'.$image->image)}}" class="img-fluid" alt="Large Image">
                             <i class="fa fa-search"></i>
                         </a>
-                    </div>
+                    </div> --}}
                     @foreach ($images as $item)
                       
                    <!-- small item -->

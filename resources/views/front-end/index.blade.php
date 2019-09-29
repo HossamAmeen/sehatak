@@ -230,10 +230,10 @@
           </div>
         </div>
         <div class="col-lg-5 mb-3 wow bounceInUp">
-          <iframe width="100%" height="300" src="https://www.youtube.com/embed/AZ1tfR2HxfY" frameborder="0"
+          <iframe width="100%" height="300" src=" {{ isset($brefs->video) ? $brefs->video : '' }}" frameborder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
-      </div>
+      </div>  
     </div>
   </section>
 

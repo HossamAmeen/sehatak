@@ -85,10 +85,12 @@ class HomeController extends Controller
     }
     public function gallery()
     {
-        $image = Gallery::all()->sortByDesc("id")->take(1)->first();
+        // $image = Gallery::all()->sortByDesc("id")->take(1)->first();
        
-        $images = Gallery::where('id' , '!=' , $image->id)->orderBy('id', 'DESC')->paginate(9);
-        
+        // $images = Gallery::where('id' , '!=' , $image->id)->orderBy('id', 'DESC')->paginate(9);
+        // $images = Gallery::all()->sortByDesc('id')->paginate(9);
+        $images = Gallery::orderBy('id', 'DESC')->paginate(8);
+
         $pageTitle = "معرض الصور" ;
         return view('front-end.gallery', compact(
             'images',

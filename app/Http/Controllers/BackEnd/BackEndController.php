@@ -101,7 +101,7 @@ class BackEndController extends Controller
          if(!is_dir($destinationPath) ){
              mkdir($destinationPath);
          }
-        $image->save($destinationPath.$fileName,60);
+        $image->save($destinationPath.$fileName);
         return $fileName;
         
     }
