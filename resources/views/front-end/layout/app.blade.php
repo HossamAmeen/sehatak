@@ -75,7 +75,7 @@
           @endif
           @if(isset($brefs->facebook) )
           <li>
-          <a href="tel:{{$brefs->phone}}" target="_blank"><i class="fa fa-whatsapp"></i></a>
+          <a href="tel:{{$brefs->phone2}}" target="_blank"><i class="fa fa-phone"></i></a>
           </li>
           @endif
           @if(isset($brefs->instagram) )
@@ -85,7 +85,7 @@
           @endif
           @if(isset($brefs->phone2) )
           <li>
-          <a href="https://wa.me/{{$brefs->phone2}}" target="_blank"><i class="fa fa-phone"></i></a>
+          <a href="https://wa.me/{{$brefs->phone}}" target="_blank"><i class="fa fa-whatsapp"></i></a>
           </li>
           @endif
         
@@ -135,7 +135,7 @@
               @endif
             </p>
             @if(isset($brefs->phone))
-            <a href="https://wa.me/{{$brefs->phone}}" class="text-white d-block">
+            <a href="tel:{{$brefs->phone}}" class="text-white d-block">
               <i class="fa fa-phone border py-1 px-2 mb-1 rounded-circle"></i>
               {{ $brefs->phone  }}
             </a>

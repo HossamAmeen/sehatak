@@ -89,9 +89,28 @@ class BackEndController extends Controller
             'routeName'
         ))->with($append);
     }
-    protected function uploadImage($request , $height = 400 , $width = 400){
+    protected function uploadImage($inputName = "image" , $request , $height = 400 , $width = 400){
         
-        $photo = $request->file('image');
+         $photo = $request->file($inputName);
+         $dimensions = getimagesize($photo);
+        // return    $_FILES[$inputName]['size'];
+         if ($_FILES[$inputName]["size"] > 500000) {
+            return false;
+         }
+       
+            $actualWidth = $dimensions[0];
+            $actualHeight = $dimensions[1];
+            $widthRatio = $actualWidth / $width;
+            $heightRatio = $actualHeight / $height;
+
+            if($heightRatio > $widthRatio){
+                //height still as it
+                $width = $actualWidth/$heightRatio;
+            }else{
+                //width still as it
+                $height = $actualHeight / $widthRatio;  
+            }
+            
         $fileName = time().str_random('10').'.'.$photo->getClientOriginalExtension();
         $destinationPath = public_path('uploads/'.$this->getClassNameFromModel().'/');
         $image = Image::make($photo->getRealPath())->resize($height, $width);

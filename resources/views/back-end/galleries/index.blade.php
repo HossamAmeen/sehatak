@@ -15,6 +15,11 @@
         @endslot
     @endcomponent
     @component('back-end.shared.table' )
+                    @if (session()->get('action') )
+                        <div class="alert alert-success">
+                            <strong>{{session()->get('action')}}</strong>
+                        </div>
+                    @endif
                     <table class="table table-bordered table-striped table-bottomless" id="ls-editable-table">
                         <thead>
                             <tr>

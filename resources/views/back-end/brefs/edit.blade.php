@@ -68,12 +68,22 @@
                                         </div>
                                 </div>
                                 <div class="form-group">
-                                        <label class="col-lg-3 control-label">رقم الواتس</label>
+                                        <label class="col-lg-3 control-label"> رقم التلفون  </label>
                                         <div class="col-lg-6">
                                             <input type="text" class="form-control" name="phone"
                                                 data-bv-message="The username is not valid"
                                                  data-bv-notempty-message="The username is  and cannot be empty"
                                                  value="{{$row->phone}}"
+                                                    />
+                                        </div>
+                                </div>
+                                 <div class="form-group">
+                                        <label class="col-lg-3 control-label">رقم الواتس</label>
+                                        <div class="col-lg-6">
+                                            <input type="text" class="form-control" name="phone2"
+                                                data-bv-message="The username is not valid"
+                                                 data-bv-notempty-message="The username is  and cannot be empty"
+                                                 value="{{$row->phone2}}"
                                                     />
                                         </div>
                                 </div>
