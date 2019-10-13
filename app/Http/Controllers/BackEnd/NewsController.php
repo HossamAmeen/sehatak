@@ -17,7 +17,7 @@ class NewsController extends BackEndController
         $requestArray = $request->all();
         if($request->hasFile('image'))
         { 
-            $fileName = $this->uploadImage("image"  , $request , 540 , 441 );
+            $fileName = $this->uploadImage("image"  , $request , 530 , 432 );
           if(isset($requestArray['image']) )
           $requestArray['image'] =  $fileName;
         }
@@ -35,7 +35,7 @@ class NewsController extends BackEndController
         $requestArray = $request->all();
         if($request->hasFile('image'))
         {
-            $fileName = $this->uploadImage("image" , $request , 540 , 441 );
+            $fileName = $this->uploadImage("image" , $request ,530 , 432 );
           if(isset($requestArray['image']) )
           $requestArray['image'] =  $fileName;
         }

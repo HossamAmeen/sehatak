@@ -17,7 +17,7 @@ class GalleryController extends BackEndController
            
             if($request->hasFile('image'))
           {
-            $fileName = $this->uploadImage("image" , $request , 350 , 300 );
+            $fileName = $this->uploadImage("image" , $request , 800 , 600 );
             // return $fileName;
             if($fileName != false)
 
@@ -34,7 +34,7 @@ class GalleryController extends BackEndController
             $requestArray = $request->all();
             if($request->hasFile('image'))
             {
-              $fileName = $this->uploadImage("image" , $request , 350 , 300 );
+              $fileName = $this->uploadImage("image" , $request , 800 , 600 );
               if(isset($requestArray['image']) )
               $requestArray['image'] =  $fileName;
             }
