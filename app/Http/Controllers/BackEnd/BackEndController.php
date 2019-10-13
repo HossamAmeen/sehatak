@@ -99,18 +99,18 @@ class BackEndController extends Controller
             return false;
          }
        
-            $actualWidth = $dimensions[0];
-            $actualHeight = $dimensions[1];
-            $widthRatio = $actualWidth / $width;
-            $heightRatio = $actualHeight / $height;
+            // $actualWidth = $dimensions[0];
+            // $actualHeight = $dimensions[1];
+            // $widthRatio = $actualWidth / $width;
+            // $heightRatio = $actualHeight / $height;
 
-            if($heightRatio > $widthRatio){
-                //height still as it
-                $width = $actualWidth/$heightRatio;
-            }else{
-                //width still as it
-                $height = $actualHeight / $widthRatio;  
-            }
+            // if($heightRatio > $widthRatio){
+            //     //height still as it
+            //     $width = $actualWidth/$heightRatio;
+            // }else{
+            //     //width still as it
+            //     $height = $actualHeight / $widthRatio;  
+            // }
 
         $fileName = time().str_random('10').'.'.$photo->getClientOriginalExtension();
         $destinationPath = public_path('uploads/'.$this->getClassNameFromModel().'/');

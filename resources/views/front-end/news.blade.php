@@ -28,7 +28,8 @@
                         <div class="col-12 news-item wow bounceInUp">
                             <div class="row">
                                 <div class="col-lg-6 col-xs-12 mb-2">
-                                        <img src="{{asset('uploads/news/'.$item->image)}} " class="img-fluid" alt="news item">
+                                  <img src="{{asset('uploads/news/'.$item->image)}} " 
+                                       class="img-fluid" alt="news item" width="5px" height="5px">
                                 </div>
                                 <div class="col-lg-6 col-xs-12 text-left">
                                     <h3>
