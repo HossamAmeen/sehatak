@@ -30,6 +30,6 @@ class QuestionController extends BackEndController
         $requestArray['user_id'] = Auth::user()->id;
         $row->update($requestArray);
         session()->flash('action', 'تم التحديث بنجاح');
-        return redirect()->route($this->getClassNameFromModel().'index');
+        return redirect()->route($this->getClassNameFromModel().'.index');
     }
 }
