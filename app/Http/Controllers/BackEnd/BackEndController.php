@@ -91,7 +91,9 @@ class BackEndController extends Controller
     }
     protected function uploadImage($inputName = "image" , $request , $height = 400 , $width = 400)
     {
-        
+         // = 800*600
+        $height = 800 ;
+        $width =600 ;    
          $photo = $request->file($inputName);
          $dimensions = getimagesize($photo);
         // return    $_FILES[$inputName]['size'];
