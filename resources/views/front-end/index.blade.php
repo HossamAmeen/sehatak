@@ -209,15 +209,14 @@
             </ol>
             <div class="carousel-inner" role="listbox">
               <!-- Slide One - Set the background image for this slide in the line below -->
-              <div class="carousel-item active" style="background-image: url('{!! asset('web/img/demo-img.png') !!}">
+              <div class="carousel-item active" style="background-image: url('{!! asset('uploads/galleries/'.$image->image) !!}">
               
               </div>
+            @foreach($images as $image)
               <!-- Slide Two - Set the background image for this slide in the line below -->
-              <div class="carousel-item" style="background-image: url('{!! asset('web/img/demo-img.png')!!}">
+              <div class="carousel-item" style="background-image:  url('{!! asset('uploads/galleries/'.$image->image) !!}">
               </div>
-              <!-- Slide Three - Set the background image for this slide in the line below -->
-              <div class="carousel-item" style="background-image: url('{!! asset('web/img/demo-img.png')!!}">
-              </div>
+            @endforeach
             </div>
             <a class="carousel-control-prev" href="#carouselGallery" role="button" data-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>

@@ -13,13 +13,15 @@ class HomeController extends Controller
     public function index()
     {
         $pageTitle = "الصفحه الرئيسيه" ;
-        
+        $image = Gallery::orderBy('id', 'DESC')->first();
+        $images = Gallery::where('id','!=',$image->id)->orderBy('id', 'DESC')->get();
         $news = News::all()->sortByDesc("id")->take(3);
 
         return view('front-end.index', compact(
             'news',
-            'pageTitle'
-           
+            'pageTitle',
+            'image',
+           'images'
         ));
     }
     public function news($id= null)
