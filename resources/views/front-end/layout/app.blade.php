@@ -73,9 +73,9 @@
           <a href="{{$brefs->facebook}}" target="_blank"><i class="fa fa-facebook"></i></a>
           </li>
           @endif
-          @if(isset($brefs->facebook) )
+          @if(isset($brefs->phone) )
           <li>
-          <a href="tel:{{$brefs->phone2}}" target="_blank"><i class="fa fa-phone"></i></a>
+          <a href="tel:{{$brefs->phone}}" target="_blank"><i class="fa fa-phone"></i></a>
           </li>
           @endif
           @if(isset($brefs->instagram) )
