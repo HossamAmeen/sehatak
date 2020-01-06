@@ -53,7 +53,7 @@
         <div class="col-lg-6 col-xs-12 my-auto wow bounceInUp">
           <h2 class="text-center mb-4 text-blue">مقدمة عن المشروع</h2>
           <p class="text-white">
-             
+
               {{ isset($brefs->description) ? $brefs->description : '' }}
               </p>
         </div>
@@ -113,19 +113,19 @@
     <div class="container pt-3 pb-5">
       <div class="row">
         @foreach ($news as $item)
-        
+
         <div class="col-lg-4 col-sm-6 mx-auto news-item wow bounceInUp">
             <div class="card h-100">
                 <a href="{{route('news' ,  $item->id ) }}"><img class="card-img-top" src="{{asset('uploads/news/'.$item->image)}}" alt="" height="347" width="283"></a>
               <div class="card-body">
                 <h3><a class="text-center text-primary" href="{{route('news' ,  $item->id ) }}">{{ $item->title }}</a></h3>
                 <small class="d-block text-muted mb-2">{{ $item->date }}</small>
-                <strong class="card-text text-primary">{{substr( $item->description , 0 , 800 )}}</strong>
-              
+                <strong class="card-text text-primary">{!!substr( $item->description , 0 , 800 )!!}</strong>
+
               </div>
             </div>
           </div>
-        @endforeach      
+        @endforeach
         <div class="col-12 wow bounceIn">
           <a href="{{route('news')}}"
             class="more-btn btn btn-lg btn-light rounded-pill text-primary font-weight-bold">المزيد</a>
@@ -210,7 +210,7 @@
             <div class="carousel-inner" role="listbox">
               <!-- Slide One - Set the background image for this slide in the line below -->
               <div class="carousel-item active" style="background-image: url('{!! asset('uploads/galleries/'.$image->image) !!}">
-              
+
               </div>
             @foreach($images as $image)
               <!-- Slide Two - Set the background image for this slide in the line below -->
@@ -232,7 +232,7 @@
           <iframe width="100%" height="300" src=" {{ isset($brefs->video) ? $brefs->video : '' }}" frameborder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
-      </div>  
+      </div>
     </div>
   </section>
 
