@@ -13,8 +13,6 @@ Route::namespace('BackEnd')->prefix('admin')->group(function(){
         Route::resource('news', 'NewsController');
         Route::resource('questions', 'QuestionController');
         Route::resource('users', 'UserController')->middleware('checkAdmin');
-
-       
     });
 });
 
@@ -31,10 +29,10 @@ Route::namespace('FrontEnd')->group(function(){
 
 
     Route::any('contacts' , "HomeController@contacts")->name('contacts');
-    
+
 });
 Route::fallback(function () {
-  
+
    return redirect()->route("404");
    return view('front-end.404');
 });

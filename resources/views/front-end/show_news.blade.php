@@ -28,7 +28,7 @@
                     <div class="my-auto col-12">
                         <img src="{{asset('uploads/news/'.$news->image)}} " alt="image" height="600" class="img-fluid border rounded my-2">
                     </div>
-                    <div class="my-auto col-12">
+                    <div class="my-auto col-12"> 
                         {!!$news->description!!}
                     </div>
 
