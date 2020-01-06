@@ -6,7 +6,7 @@
             <div class="carousel-inner" role="listbox">
                 <!-- Slide One - Set the background image for this slide in the line below -->
                 <div class="carousel-item active" style="background-image: url('{!! asset('web/img/news-bg.png') !!}')">
-                
+
                 </div>
             </div>
         </div>
@@ -29,10 +29,10 @@
                         <img src="{{asset('uploads/news/'.$news->image)}} " alt="image" height="600" class="img-fluid border rounded my-2">
                     </div>
                     <div class="my-auto col-12">
-                        {{$news->description }}
+                        {!!$news->description!!}
                     </div>
-                    
-                   
+
+
                 </div>
             </div>
         </section>

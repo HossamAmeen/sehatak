@@ -120,8 +120,8 @@
               <div class="card-body">
                 <h3><a class="text-center text-primary" href="{{route('news' ,  $item->id ) }}">{{ $item->title }}</a></h3>
                 <small class="d-block text-muted mb-2">{{ $item->date }}</small>
-                <strong class="card-text text-primary">{!!substr( $item->description , 0 , 800 )!!}</strong>
-
+                <!-- <strong class="card-text text-primary">{{ $item->ar_sub_des  }}</strong> -->
+  <strong class="card-text text-primary">	{{ \Illuminate\Support\Str::limit($item->ar_sub_des, 150 ) }}</strong>
               </div>
             </div>
           </div>
